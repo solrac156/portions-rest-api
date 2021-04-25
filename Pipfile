@@ -12,6 +12,8 @@ flask-jwt-extended = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
 sqlalchemy = "*"
+marshmallow-sqlalchemy = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
