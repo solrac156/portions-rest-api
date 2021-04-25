@@ -11,5 +11,5 @@ convention = {
 }
 
 
-metadata = MetaData(naming_coinvention=convention)
+metadata = MetaData(naming_convention=convention)
 db = SQLAlchemy(metadata=metadata)
