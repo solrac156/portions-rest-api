@@ -1,3 +1,4 @@
+from dotenv import load_dotenv
 from flask import Flask, jsonify
 from flask_jwt_extended import JWTManager
 from flask_migrate import Migrate
@@ -7,6 +8,10 @@ from marshmallow import ValidationError
 from blacklist import BLACKLIST
 from db import db
 from ma import ma
+from resources.user import UserRegister, UserLogin, User, TokenRefresh, \
+    UserLogout, ChangePassword
+
+load_dotenv()
 
 app = Flask(__name__)
 app.config.from_object('default_config')
@@ -31,6 +36,14 @@ def handle_marshmallow_error(err):
 @jwt.token_in_blocklist_loader
 def check_if_token_in_blacklist(decrypted_token):
     return decrypted_token['jti'] in BLACKLIST
+
+
+api.add_resource(UserRegister, '/sign-up')
+api.add_resource(UserLogin, '/login')
+api.add_resource(UserLogout, '/logout')
+api.add_resource(User, '/user/<int:user_id>')
+api.add_resource(ChangePassword, '/user/password')
+api.add_resource(TokenRefresh, '/refresh')
 
 
 if __name__ == '__main__':
