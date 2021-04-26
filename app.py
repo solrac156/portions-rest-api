@@ -9,6 +9,7 @@ from blacklist import BLACKLIST
 from db import db
 from ma import ma
 from resources.diet import Diet
+from resources.meal import Meal, DailyMeal, AllMeals, RemainingMeal
 from resources.user import UserRegister, UserLogin, User, TokenRefresh, \
     UserLogout, ChangePassword
 
@@ -46,6 +47,10 @@ api.add_resource(User, '/user/<int:user_id>')
 api.add_resource(ChangePassword, '/user/password')
 api.add_resource(TokenRefresh, '/refresh')
 api.add_resource(Diet, '/diet')
+api.add_resource(Meal, '/meal', '/meal/<int:meal_id>')
+api.add_resource(DailyMeal, '/daily-meal')
+api.add_resource(AllMeals, '/all-meals')
+api.add_resource(RemainingMeal, '/remaining')
 
 
 if __name__ == '__main__':
