@@ -11,5 +11,11 @@
   "diet_failed_to_create_or_update": "Internal server error. Failed to create/update diet.",
   "diet_not_found": "Diet not found.",
   "diet_deleted": "Diet deleted.",
-  "diet_updated": "Diet updated successfully."
+  "diet_updated": "Diet updated successfully.",
+
+  "meal_created": "Meal created successfully.",
+  "meal_not_found": "Meal not found.",
+  "meal_failed_to_create": "Internal server error. Failed to create meal.",
+  "meal_deleted": "Meal deleted.",
+  "meal_invalid_date": "Invalid date. Please provide a valid date."
 }
