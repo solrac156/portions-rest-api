@@ -6,5 +6,10 @@
   "user_deleted": "User deleted.",
   "user_invalid_credentials": "Invalid credentials",
   "user_logged_out": "User '{}' successfully logged out.",
-  "user_password_updated": "User password updated successfully."
+  "user_password_updated": "User password updated successfully.",
+
+  "diet_failed_to_create_or_update": "Internal server error. Failed to create/update diet.",
+  "diet_not_found": "Diet not found.",
+  "diet_deleted": "Diet deleted.",
+  "diet_updated": "Diet updated successfully."
 }
