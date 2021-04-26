@@ -65,7 +65,7 @@ class UserLogin(Resource):
 
 class UserLogout(Resource):
     @classmethod
-    @jwt_required
+    @jwt_required()
     def post(cls):
         jti = get_jwt()['jti']
         user_id = get_jwt_identity()
