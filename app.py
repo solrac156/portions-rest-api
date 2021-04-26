@@ -35,8 +35,8 @@ def handle_marshmallow_error(err):
 
 
 @jwt.token_in_blocklist_loader
-def check_if_token_in_blacklist(decrypted_token):
-    return decrypted_token['jti'] in BLACKLIST
+def check_if_token_in_blacklist(jwt_header, jwt_payload):
+    return jwt_payload["jti"] in BLACKLIST
 
 
 api.add_resource(UserRegister, '/sign-up')
