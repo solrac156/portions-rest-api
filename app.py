@@ -8,6 +8,7 @@ from marshmallow import ValidationError
 from blacklist import BLACKLIST
 from db import db
 from ma import ma
+from resources.diet import Diet
 from resources.user import UserRegister, UserLogin, User, TokenRefresh, \
     UserLogout, ChangePassword
 
@@ -44,6 +45,7 @@ api.add_resource(UserLogout, '/logout')
 api.add_resource(User, '/user/<int:user_id>')
 api.add_resource(ChangePassword, '/user/password')
 api.add_resource(TokenRefresh, '/refresh')
+api.add_resource(Diet, '/diet')
 
 
 if __name__ == '__main__':
